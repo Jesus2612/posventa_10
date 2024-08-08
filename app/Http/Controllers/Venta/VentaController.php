@@ -797,8 +797,15 @@ class VentaController extends Controller
         $suelto = $getData['suelto'];
         $efectivo = $getData['efectivo'];
 
+        // Calcular la altura del papel en función del número de detalles
+        $detailCount = count($detail);
+        $baseHeight = 400.772; // Altura base
+        $additionalHeightPerItem = 30; // Ajusta según sea necesario
+        $totalHeight = $baseHeight + ($detailCount * $additionalHeightPerItem);
+
         $pdf = PDF::loadView("ventas.venta.generateTicketPdf", compact('detail','sale','settings','suelto','efectivo'));
-        $pdf->setPaper([0, 0, 226.772, 566.929]); //// Width: 80mm, Height: 297mm
+        
+        $pdf->setPaper([0, 0, 226.772, $totalHeight]); //// Width: 80mm, Height: 297mm
         $pdfContent = $pdf->output();
         $base64Pdf = base64_encode($pdfContent);
 

@@ -141,7 +141,7 @@
           <input type="number" id="suelt_vent" name="suelt_vent" hidden="true">
           <input type="text" name="idventa" id="idventa" hidden="true">
           <div class=" text-center">
-            <h5><strong style="color:white"> EL CAMBIO ES DE $ : <span id="cambio_sale"></span></strong></h5>
+            <h5><strong style="color:white"> EL CAMBIO ES DE: $<span id="cambio_sale"></span></strong></h5>
           </div>
           <div id="show_input_email" style="display:none;">
             <div class="row g-3" >

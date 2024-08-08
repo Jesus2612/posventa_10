@@ -6,10 +6,18 @@
     
         body {
             font-family: Arial, sans-serif;
-            /*margin: 0;
-            padding: 0;*/
+            margin: 0;
+            padding: 0;
+            width: 100%;
             
         }
+
+        .ticket {
+            width: 100%;
+            max-width: 80mm;
+            margin: 0 auto;
+        }
+
         .ticket1 {
             width: 300px;
             /*margin: 20px auto;*/
